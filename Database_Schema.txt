@@ -1,0 +1,45 @@
+📘 Database Schema
+1. User
+Stores authenticated user information.
+| Field       | Type     | Description            |
+| ----------- | -------- | ---------------------- |
+| `_id`       | ObjectId | Unique identifier      |
+| `name`      | String   | Name of the user       |
+| `email`     | String   | Email (must be unique) |
+| `password`  | String   | Hashed password        |
+| `createdAt` | Date     | Timestamp of creation  |
+| `updatedAt` | Date     | Timestamp of update    |
+
+
+2. Book
+Represents a book that users can review.
+| Field         | Type        | Description                      |
+| ------------- | ----------- | -------------------------------- |
+| `_id`         | ObjectId    | Unique identifier                |
+| `title`       | String      | Title of the book                |
+| `author`      | String      | Author of the book               |
+| `genre`       | String      | Genre (e.g., Fiction, Self-help) |
+| `description` | String      | Short description                |
+| `reviews`     | \[ObjectId] | Array of review references       |
+| `createdAt`   | Date        | Timestamp of creation            |
+| `updatedAt`   | Date        | Timestamp of update              |
+
+
+3. Review
+Holds user-submitted reviews for books.
+| Field       | Type     | Description           |
+| ----------- | -------- | --------------------- |
+| `_id`       | ObjectId | Unique identifier     |
+| `book`      | ObjectId | Reference to `Book`   |
+| `user`      | ObjectId | Reference to `User`   |
+| `rating`    | Number   | Rating from 1 to 5    |
+| `comment`   | String   | Optional user comment |
+| `createdAt` | Date     | Timestamp of creation |
+| `updatedAt` | Date     | Timestamp of update   |
+
+
+🔄 Relationships
+
+One User → Can give one review per book
+One Book → Can have many reviews
+One Review → Belongs to one User and one Book
