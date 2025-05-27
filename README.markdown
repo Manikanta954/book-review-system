@@ -251,5 +251,6 @@ The server will run at: **http://localhost:5000**
 ## 🔍 Search Books
 
 - **Method**: GET
-- **URL**: `http://localhost:5000/api/books/search?q=atomic`
+- **URL**: `http://localhost:5000/api/books/search?q=enterSearchValue`
+- **example**: `http://localhost:5000/api/books/search?q=Productivity`
 - **Note**: Searches by title or author (case-insensitive, partial match).
