@@ -20,8 +20,8 @@ A RESTful API built using **Node.js**, **Express**, and **MongoDB** to manage bo
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/Manikanta954/book-review-api.git
-cd book-review-api
+git clone https://github.com/Manikanta954/book-review-system.git
+cd book-review-system
 ```
 
 ### 2. Folder Structure
@@ -57,7 +57,7 @@ npm install
 
 ### 4. Configure Environment Variables
 
-Create a `.env` file in the root directory with the following:
+This is `.env` file in the root directory with the following:
 
 ```plaintext
 PORT=5000
