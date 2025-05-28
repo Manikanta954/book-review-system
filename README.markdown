@@ -4,6 +4,16 @@ A RESTful API built using **Node.js**, **Express**, and **MongoDB** to manage bo
 
 ---
 
+## 🛠️ Tech Stack
+# Backend
+- Runtime: Node.js
+
+- Framework: Express.js
+
+- Authentication: JWT-based auth with middleware
+
+- Database: MongoDB (via Mongoose)
+
 ## 🚀 Features
 
 - Add, retrieve, update, and delete books
